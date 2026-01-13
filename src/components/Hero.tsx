@@ -78,7 +78,7 @@ const Hero = () => {
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in">
             Your Expert Team,
-            <span className="block text-accent mt-2">Behind the Scenes</span>
+            <span className="block mt-2 font-bold" style={{ color: 'rgba(3, 218, 190, 1)' }}>Behind the Scenes</span>
           </h1>
 
           <p className="text-xl text-white/90 mb-8 leading-relaxed animate-fade-in">
@@ -88,37 +88,23 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in">
             <Button
               size="lg"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold group px-8 py-6 text-lg shadow-2xl hover:shadow-blue-500/50 hover:scale-105 transition-all duration-300 relative overflow-hidden"
+              className="text-white font-semibold group px-8 py-6 text-lg shadow-2xl hover:scale-105 transition-all duration-300 relative overflow-hidden"
+              style={{ backgroundColor: '#18d0fe' }}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
               <Phone className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
-              Talk to Our Team
+              <div style={{ color: 'rgba(255, 255, 255, 1)' }}>Talk to Our Team</div>
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="glass border-2 border-white/30 text-white hover:bg-white hover:text-primary px-8 py-6 text-lg transition-all hover:scale-105 duration-300"
+              className="border-2 border-white/30 text-white px-8 py-6 text-lg transition-all hover:scale-105 duration-300"
+              style={{ backgroundColor: '#03dabe' }}
             >
               See How We Work
             </Button>
           </div>
 
-          {/* Trust Indicators */}
-          <div className="mt-12 flex flex-wrap items-center gap-8 text-white/80 text-sm animate-fade-in">
-            <div className="flex items-center gap-2">
-              <div className="flex -space-x-2">
-                <div className="w-8 h-8 rounded-full bg-accent/30 border-2 border-white" />
-                <div className="w-8 h-8 rounded-full bg-accent/40 border-2 border-white" />
-                <div className="w-8 h-8 rounded-full bg-accent/50 border-2 border-white" />
-              </div>
-              <span>50+ Transport Companies</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="text-accent text-2xl">★★★★★</div>
-              <span>5.0 Average Rating</span>
-            </div>
-          </div>
         </div>
       </div>
 
