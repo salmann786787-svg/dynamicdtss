@@ -64,8 +64,8 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-6 relative z-10 py-20">
-        <div className="max-w-2xl parallax-container">
+      <div className="container mx-auto px-6 relative z-10 py-20 flex flex-col">
+        <div className="max-w-2xl parallax-container flex flex-col justify-start items-start ml-auto">
           <div
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-6 animate-fade-in group hover:scale-105 transition-transform cursor-pointer"
             style={{
@@ -76,9 +76,9 @@ const Hero = () => {
             <span className="text-sm text-white font-medium">Trusted by Premium Transport Companies</span>
           </div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in">
-            Your Expert Team,
-            <span className="block mt-2 font-bold" style={{ color: 'rgba(3, 218, 190, 1)' }}>Behind the Scenes</span>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in flex flex-col">
+            <div style={{ margin: "0 auto" }}>Your Expert Team,</div>
+            <div className="block mt-2 font-bold" style={{ color: 'rgba(3, 218, 190, 1)' }}>Behind the Scenes</div>
           </h1>
 
           <p className="text-xl text-white/90 mb-8 leading-relaxed animate-fade-in">
