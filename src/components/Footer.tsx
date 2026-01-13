@@ -1,6 +1,5 @@
 import { Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-import ddLogo from "@/assets/dd-logo.png";
 
 const Footer = () => {
   return (
@@ -9,9 +8,9 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <img src={ddLogo} alt="Dynamic Dispatch Logo" className="w-12 h-12" />
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F61171f36a49943d897e715737efdec38%2F36adae4df5324a968a324096a0e80d80" alt="Dynamic Dispatch Logo" className="w-12 h-12" />
               <div>
-                <span className="font-semibold text-lg block leading-tight">Dynamic Dispatch</span>
+                <span className="font-semibold text-lg block leading-tight" style={{ color: 'rgba(103, 191, 255, 1)' }}>Dynamic Dispatch</span>
                 <span className="text-white/70 text-sm">& Tech Solutions Services</span>
               </div>
             </div>
