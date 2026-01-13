@@ -64,8 +64,8 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-6 relative z-10 py-20 flex flex-col">
-        <div className="max-w-2xl parallax-container flex flex-col justify-start items-start ml-auto">
+      <div className="container mx-auto px-6 relative z-10 py-20 flex flex-col" style={{ margin: "0 auto" }}>
+        <div className="max-w-2xl parallax-container flex flex-col justify-start items-start" style={{ margin: "0 auto" }}>
           <div
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-6 animate-fade-in group hover:scale-105 transition-transform cursor-pointer"
             style={{
