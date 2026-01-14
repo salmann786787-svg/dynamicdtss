@@ -90,6 +90,7 @@ const Hero = () => {
               size="lg"
               className="text-white font-semibold group px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg shadow-2xl hover:scale-105 transition-all duration-300 relative overflow-hidden w-full sm:w-auto"
               style={{ backgroundColor: '#18d0fe' }}
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
               <Phone className="mr-2 h-4 sm:h-5 w-4 sm:w-5 group-hover:rotate-12 transition-transform flex-shrink-0" />
@@ -100,6 +101,7 @@ const Hero = () => {
               size="lg"
               className="border-2 border-white/30 text-white px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg transition-all hover:scale-105 duration-300 w-full sm:w-auto"
               style={{ backgroundColor: '#03dabe' }}
+              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
             >
               See How We Work
             </Button>

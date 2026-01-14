@@ -1,11 +1,35 @@
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
-import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  return <nav className="fixed top-0 left-0 right-0 z-50 bg-background/60 backdrop-blur-xl border-b border-border/50">
+  const navRef = useRef<HTMLDivElement>(null);
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
+
+  // Close menu when a link is clicked
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
+
+  return <nav ref={navRef} className="fixed top-0 left-0 right-0 z-50 bg-background/60 backdrop-blur-xl border-b border-border/50">
     <div className="container mx-auto px-6">
       <div className="flex items-center justify-between h-20">
         {/* Logo */}
@@ -38,7 +62,7 @@ const Navigation = () => {
         <div className="md:hidden flex items-center gap-2">
           <ThemeToggle />
           <button className="p-2 text-foreground hover:text-accent transition-colors" onClick={() => setIsOpen(!isOpen)}>
-            <Menu className="w-6 h-6" />
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>
@@ -46,21 +70,19 @@ const Navigation = () => {
       {/* Mobile Navigation */}
       {isOpen && <div className="md:hidden py-4 border-t border-border/50 animate-fade-in">
         <div className="flex flex-col gap-4">
-          <a href="#services" className="text-foreground hover:text-accent transition-colors font-medium">
+          <a href="#services" onClick={handleLinkClick} className="text-foreground hover:text-accent transition-colors font-medium">
             Our Services
           </a>
-          <a href="#why-us" className="text-foreground hover:text-accent transition-colors font-medium">
+          <a href="#why-us" onClick={handleLinkClick} className="text-foreground hover:text-accent transition-colors font-medium">
             Why Us
           </a>
-          <a href="#contact" className="text-foreground hover:text-accent transition-colors font-medium">
+          <a href="#contact" onClick={handleLinkClick} className="text-foreground hover:text-accent transition-colors font-medium">
             Contact
           </a>
-          <Button className="text-white font-semibold w-full hover:opacity-90" style={{ backgroundColor: '#66beff' }}>
-            Get Started
-          </Button>
         </div>
       </div>}
     </div>
   </nav>;
 };
 export default Navigation;
+
