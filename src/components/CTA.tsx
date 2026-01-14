@@ -17,7 +17,8 @@ const CTA = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button
               size="lg"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold group px-8 py-6 text-lg shadow-2xl"
+              className="text-white font-semibold group px-8 py-6 text-lg shadow-2xl"
+              style={{ backgroundColor: '#68bfff' }}
             >
               <Phone className="mr-2 h-5 w-5" />
               Schedule a Call
@@ -25,7 +26,8 @@ const CTA = () => {
             </Button>
             <Button
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-white font-semibold px-8 py-6 text-lg border-2 border-accent"
+              className="text-white font-semibold px-8 py-6 text-lg border-2"
+              style={{ backgroundColor: 'rgba(3, 218, 190, 1)', borderColor: 'rgb(7, 182, 213)' }}
             >
               <Mail className="mr-2 h-5 w-5" />
               Send Us an Email
