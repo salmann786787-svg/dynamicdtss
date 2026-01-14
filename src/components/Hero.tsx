@@ -64,41 +64,41 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-6 relative z-10 py-20 flex flex-col" style={{ margin: "0 auto" }}>
+      <div className="container mx-auto px-6 relative z-10 py-12 md:py-20 flex flex-col w-full">
         <div className="max-w-2xl parallax-container flex flex-col justify-start items-start" style={{ marginRight: "auto" }}>
           <div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-6 animate-fade-in group hover:scale-105 transition-transform cursor-pointer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-6 animate-fade-in group hover:scale-105 transition-transform cursor-pointer text-xs md:text-sm"
             style={{
               transform: `translateX(${mousePosition.x * 0.01}px) translateY(${mousePosition.y * 0.01}px)`,
             }}
           >
-            <Sparkles className="w-4 h-4 text-accent animate-pulse" />
-            <span className="text-sm text-white font-medium">Trusted by Premium Transport Companies</span>
+            <Sparkles className="w-4 h-4 text-accent animate-pulse flex-shrink-0" />
+            <span className="text-white font-medium">Trusted by Premium Transport Companies</span>
           </div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in flex flex-col">
-            <div style={{ margin: "0 auto" }}>Your Expert Team,</div>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in flex flex-col w-full">
+            <div>Your Expert Team,</div>
             <div className="block mt-2 font-bold" style={{ color: 'rgba(3, 218, 190, 1)' }}>Behind the Scenes</div>
           </h1>
 
-          <p className="text-xl text-white/90 mb-8 leading-relaxed animate-fade-in">
+          <p className="text-base md:text-lg lg:text-xl text-white/90 mb-8 leading-relaxed animate-fade-in">
             Real people, real expertise. We handle your dispatch, bookings, and back office so you can focus on delivering exceptional luxury service to your clients.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in w-full sm:w-auto">
             <Button
               size="lg"
-              className="text-white font-semibold group px-8 py-6 text-lg shadow-2xl hover:scale-105 transition-all duration-300 relative overflow-hidden"
+              className="text-white font-semibold group px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg shadow-2xl hover:scale-105 transition-all duration-300 relative overflow-hidden w-full sm:w-auto"
               style={{ backgroundColor: '#18d0fe' }}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
-              <Phone className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
-              <div style={{ color: 'rgba(255, 255, 255, 1)' }}>Talk to Our Team</div>
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <Phone className="mr-2 h-4 sm:h-5 w-4 sm:w-5 group-hover:rotate-12 transition-transform flex-shrink-0" />
+              <span>Talk to Our Team</span>
+              <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
             </Button>
             <Button
               size="lg"
-              className="border-2 border-white/30 text-white px-8 py-6 text-lg transition-all hover:scale-105 duration-300"
+              className="border-2 border-white/30 text-white px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg transition-all hover:scale-105 duration-300 w-full sm:w-auto"
               style={{ backgroundColor: '#03dabe' }}
             >
               See How We Work
